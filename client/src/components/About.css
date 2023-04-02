@@ -1,0 +1,27 @@
+.frontBox{
+    background-color: aqua;
+    height: 600px;
+}
+.AboutImage{
+    position: absolute;
+    top: 30%;
+    left:12%;
+    
+    
+
+}
+.AboutImage img{
+    width: 500px;
+
+}
+.AboutDescription{
+    position: absolute;
+    width: 180px;
+    left: 65%;
+    top: 19%;
+    border-style: solid;
+    text-align: center;
+    padding: 20px;
+
+}
+

@@ -1,0 +1,25 @@
+nav{
+    background-color: wheat;
+    border-style: solid;
+
+
+}
+
+
+.NavBarLinks{
+
+    display: flex;
+    justify-content: left;
+    width: 25%;
+
+
+}
+nav h1{
+    margin: 10px;
+    position: absolute;
+    top: 0;
+    left: 43%;
+    
+    
+
+}

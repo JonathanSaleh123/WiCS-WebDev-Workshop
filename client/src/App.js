@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react';
 
 import './App.css';
+import NavBar from './components/NavBar';
+import About from './components/About';
+import Projects from './components/Projects';
+import Footer from './components/Footer';
 
 // App() is like our main()
 function App() 
@@ -21,7 +25,10 @@ function App()
   const HTML =
     (
       <div>
-        <h1>Hello World</h1>
+        <NavBar></NavBar>
+        <About></About>
+        <Projects title={"Game"} description={"Somebody going to be a bitch"} image={"images/johny-goerend-t1j-1GdWNgo-unsplash.jpg"}></Projects>
+        <Footer></Footer>
       </div>
     );
 
