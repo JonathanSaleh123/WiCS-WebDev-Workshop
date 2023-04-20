@@ -1,27 +1,40 @@
-.frontBox{
-    background-color: aqua;
+#aboutSection {
+    background-image: radial-gradient(red, orange, yellow, green, blue, purple);
     height: 600px;
 }
-.AboutImage{
-    position: absolute;
-    top: 30%;
-    left:12%;
-    
-    
 
+#aboutSection > * {
+    top: 100px
 }
-.AboutImage img{
-    width: 500px;
 
+#aboutImage {
+    padding-left: 12%;
+    padding-top: 100px;
 }
-.AboutDescription{
+
+#aboutImage > img {
+    height: 400px;
+    position:absolute;
+}
+
+#aboutImage > img:hover {
+    height: 500px;
+}
+
+img:hover {
+    filter: drop-shadow(16px 16px 20px red) invert(75%);
+}
+
+#aboutDescription {
+    right: 10%;
+    width: 20%;
     position: absolute;
-    width: 180px;
-    left: 65%;
-    top: 19%;
     border-style: solid;
     text-align: center;
-    padding: 20px;
-
+    padding: 16px;
 }
 
+#aboutDescription a {
+    color: inherit;
+    text-decoration: none; /* no underline */
+}

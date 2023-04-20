@@ -1,25 +1,20 @@
-nav{
+nav {
     background-color: wheat;
     border-style: solid;
-
-
 }
 
-
-.NavBarLinks{
-
-    display: flex;
-    justify-content: left;
-    width: 25%;
-
-
-}
-nav h1{
-    margin: 10px;
+.NavBarLinks {
     position: absolute;
-    top: 0;
-    left: 43%;
-    
-    
+    display: flex;
+}
 
+.NavBarLinks a {
+    color: inherit;
+    text-decoration: none; /* no underline */
+}
+
+#navBarHeader {
+    margin: 10px;
+    top: 0;
+    text-align: center;
 }

@@ -1,29 +1,34 @@
 import React from "react";
+
 import "./Navbar.css"
 
-export default function NavBar(){
-
+export default function NavBar()
+{
     return(
-            <nav id="nav_bar">
+            <nav>
                 <div className="NavBarLinks">
-                    <NavBarLink name="Home"></NavBarLink>
-                    <NavBarLink name="About us"></NavBarLink>
-                    <NavBarLink name="Projects"></NavBarLink>
+                    <NavBarLink name="Home"      href=""></NavBarLink>
+                    <NavBarLink name="About"     href=""></NavBarLink>
+                    <NavBarLink name="Projects"  href=""></NavBarLink>
                 </div>
-                <h1>Jonathan's World</h1>
+                <h1 id="navBarHeader">This Is A Website</h1>
             </nav>
-
     );
 }
 
-class NavBarLink extends React.Component{
-    render(){
+class NavBarLink extends React.Component
+{
+    render()
+    {
+        const link = this.props.href;
+        const text = this.props.name;
+
         return(
             <ul>
-                <a href={this.props.href} className="NavLink">
-                    {this.props.name}
+                <a href={link}>
+                    {text}
                 </a>
             </ul>
-        )
+        );
     }
 }

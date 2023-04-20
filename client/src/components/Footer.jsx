@@ -1,17 +1,23 @@
 import React from "react";
 
-<script src="https://kit.fontawesome.com/3bc73ba35f.js" crossorigin="anonymous"></script>
+import "./Footer.css"
 
-export default function Footer() {
+export default function Footer({foo}) 
+{
   return (
-    <div className="FooterBox">
-        <p id="left">Copyright © 2021 All rights reserved.</p>
-        <div className="centerLogos">
-          <i className="fa-solid fa-envelope"></i>
-          <i className="fa-solid fa-phone"></i>
-          <i className="fa-brands fa-github"></i>
-        </div>
-        <p id="right">Source code available</p>
+    <div id="footerBox">
+        That's all we got so far...
+
+        <br></br>
+        <br></br>
+
+        {foo}
+        
+        <form>
+          <input type="text" placeholder="secret code"></input>  
+          <input value="Enter"></input>
+        </form>
+        
     </div>
   );
 }

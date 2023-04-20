@@ -1,5 +1,12 @@
 import React, { useEffect, useState } from 'react';
 
+// all of the different components of the front end
+// are included them their respective files
+import NavBar from './components/NavBar';
+import About from './components/About';
+import Projects from './components/Projects';
+import Footer from './components/Footer';
+
 import './App.css';
 import NavBar from './components/NavBar';
 import About from './components/About';
@@ -12,23 +19,26 @@ function App()
   // https://react.dev/reference/react/useState
   // [var, setVar] = useState(varInitialValue)
   const [backendData, setBackendData] = useState();
+  const [isFirstLoad, setFirstLoad] = useState(false);
 
-  // https://react.dev/reference/react/useEffect
+  if (!isFirstLoad)
+  {
+    fetch("nonsense/rng")
+      .then(response => response.json())
+      .then(data => {setBackendData(data)});
+      
+    setFirstLoad(true);
+  }
 
-  // this code magically puts the server's response into backendData
-  fetch("/api").then(   // then has bunch of default params, 
-    response => response.json() // response is an object, reassign its values to itself.json()
-  ).then(
-    data => { setBackendData(data) }  // data is set to return of setBackendData(data)?
-  );
+  console.log(backendData);
 
   const HTML =
     (
       <div>
         <NavBar></NavBar>
         <About></About>
-        <Projects title={"Game"} description={"Somebody going to be a bitch"} image={"images/johny-goerend-t1j-1GdWNgo-unsplash.jpg"}></Projects>
-        <Footer></Footer>
+        <Projects></Projects>
+        <Footer foo={backendData}></Footer>
       </div>
     );
 

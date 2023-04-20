@@ -1,43 +1,59 @@
 import React from "react";
 
+import "./Projects.css"
+
+import Image from "./images/chara_01.jpg"
 
 export default function Projects(){
 
     return(
-            <div className="mainBox">
-                <h1>Projects</h1>
+            <div id="projectsBox">
 
-                <div className="projectsBox">
-                    <div className="imagebox">
-                        <img src="./images/johny-goerend-t1j-1GdWNgo-unsplash.jpg"/>
-                    </div>
-                    <div className="description">
-                        <h1>Hog</h1>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae unde sint a accusantium consectetur ex saofficiis.</p>
-                    </div>
-                </div>
+                <h1>Projects:</h1>
 
-                <div className="projectsBox">
-                    <div className="imagebox">
-                        <img src="./images/johny-goerend-t1j-1GdWNgo-unsplash.jpg"/>
-                    </div>
-                    <div className="description">
-                        <h1>Twitter Trends</h1>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae unde sint a accusantium consectetur ex saofficiis.</p>
-                    </div>
-                </div>
+                <ProjectEntry
+                    project=
+                    {{
+                        title: "Project 1",
+                        image: Image,
+                        description: "This is the description for Project 1."
+                    }}
+                ></ProjectEntry>
 
-                <div className="projectsBox">
-                    <div className="imagebox">
-                        <img src="./images/johny-goerend-t1j-1GdWNgo-unsplash.jpg"/>
-                    </div>
-                    <div className="description">
-                        <h1>Ants vs SomeBees</h1>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae unde sint a accusantium consectetur ex saofficiis.</p>
-                    </div>
-                </div>
+                <ProjectEntry
+                    project=
+                    {{
+                        title: "Project 2",
+                        image: Image,
+                        description: "This is the description for Project 2."
+                    }}
+                ></ProjectEntry>
+
+                <ProjectEntry
+                    project=
+                    {{
+                        title: "Project 3",
+                        image: Image,
+                        description: "This is the description for Project 3."
+                    }}
+                ></ProjectEntry>
+
             </div>
     );
 }
 
+function ProjectEntry({project}) {
+    return (
+        <div className="projectBox">
+            <div className="projectInfo">
+                <h1> {project.title} </h1>
 
+                <div className="projectImageBox">
+                    <img src={project.image}/>
+                </div>
+
+                <p>  {project.description} </p>
+            </div>
+    </div>
+    );
+  }
